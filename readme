@@ -1,0 +1,24 @@
+Vitaly Korzh (Корж Виталий)
+Backend 1+
+
+Requirements:
+PHP 5.3+
+DomDocument
+file_get_contents - to load file (curl can be used)
+nginx, apache
+
+Usage:
+1. web - main.php use it
+2. console
+
+file uwc i is core of the system, some methods have description
+Parser - parse layer we can change dependencies (now its not supported because we have no variants)
+cssSemantic - compare css files
+RegExMap - Build selector list over Regex - nice but is slower, so deprecated
+DomMap - Build selector map by DomDocument, somehow its faster and lighter then regExp case
+Search - compare css on page (subclasses not used, its the way to improve)
+FileLoad - just loads file content, one place to override
+
+not using interfaces no reason to use if no need to scale.
+
+PS sorry for poor description, i hope you can easily make it work
